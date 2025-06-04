@@ -6,13 +6,13 @@
   "description": "Adds a red border to all webpages matching mozilla.org.",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/78px-Breach_Scarab_inventory_icon.png"
   },
 
   "content_scripts": [
     {
       "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "js": ["Scarab-Calculator.js"]
     }
   ]
 }
