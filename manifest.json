@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Scarab Calculator",
   "version": "1.0",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "Calculates additional information on wealthyexile.com",
 
   "icons": {
     "48": "icons/78px-Breach_Scarab_inventory_icon.png"
@@ -12,7 +12,8 @@
   "content_scripts": [
     {
       "matches": ["*://*.wealthyexile.com/*"],
-      "js": ["Scarab-Calculator.js"]
+      "js": ["scarab-calculator.js"],
+      "run_at": "document_idle"
     }
   ]
 }
