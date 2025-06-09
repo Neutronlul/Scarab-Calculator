@@ -26,4 +26,13 @@ function tableInjection() {
 const table = document.querySelector("table.mantine-Table-table");
 */
 
-document.body.style.border = "5px solid red";
+if (validPath()) {
+    console.log("Path is valid.")
+    document.body.style.border = "5px solid red";
+} else {
+    console.log("Path is invalid.")
+}
+/*
+if validPath new mutator
+
+*/

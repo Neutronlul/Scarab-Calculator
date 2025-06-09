@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Scarab Calculator",
+  "version": "1.0",
+
+  "description": "Calculates additional information on wealthyexile.com",
+
+  "icons": {
+    "48": "icons/78px-Breach_Scarab_inventory_icon.png"
+  },
+
+  "permissions": [
+    "webNavigation"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "exclude_matches": [
+        "*://*.wealthyexile.com/*snapshotID=*"
+      ],
+      "matches": [
+        "*://*.wealthyexile.com/",
+        "*://*.wealthyexile.com/?*",
+        "*://*.wealthyexile.com/stash*"
+      ],
+      "js": ["scarab-calculator.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
