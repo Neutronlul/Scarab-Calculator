@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.wealthyexile.com/*"],
-      "js": ["scarab-calculator.js"],
+      "js": ["old-functions.js", "scarab-calculator.js"],
       "run_at": "document_idle"
     }
   ]

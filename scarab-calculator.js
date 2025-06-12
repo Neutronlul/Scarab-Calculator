@@ -26,13 +26,23 @@ function tableInjection() {
 const table = document.querySelector("table.mantine-Table-table");
 */
 
+/*
 if (validPath()) {
     console.log("Path is valid.")
     document.body.style.border = "5px solid red";
 } else {
     console.log("Path is invalid.")
 }
+*/
+
 /*
 if validPath new mutator
 
 */
+if (validPath()) {
+  document.querySelectorAll("tbody > tr").forEach((row) => {
+    generateCalculations(row);
+  })
+}
+
+observer.observe(document.body, {childList: true, subtree: true});
